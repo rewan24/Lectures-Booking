@@ -37,6 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "rest_framework",
+    "users",      # لو عندك app اسمه users
+    "students",   # ضيف اسم الـ app زي ما هو في فولدر المشروع
+    "teachers",
+    "groups",
+    "bookings",
 ]
 
 MIDDLEWARE = [

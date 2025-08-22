@@ -1,9 +1,10 @@
 from django.urls import path
-from .views import StudentListCreateAPIView, StudentRetrieveUpdateDestroyAPIView
+from . import views
 
 app_name = "students"
 
 urlpatterns = [
-    path("students/", StudentListCreateAPIView.as_view(), name="student-list-create"),
-    path("students/<int:pk>/", StudentRetrieveUpdateDestroyAPIView.as_view(), name="student-detail"),
+    path("", views.student_list, name="student-list"),          # GET list
+    path("create/", views.student_create, name="student-create"), # POST create
+    path("<int:pk>/", views.student_detail, name="student-detail"), # GET/PUT/DELETE
 ]

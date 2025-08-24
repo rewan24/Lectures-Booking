@@ -23,6 +23,8 @@ urlpatterns = [
     path("api/students/", include("students.urls", namespace="students")),
     path('api/users/', include('users.urls')),
     path('api/groups/', include('groups.urls', namespace='groups')),
+    path('api/bookings/', include('bookings.urls')),
+
 
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
